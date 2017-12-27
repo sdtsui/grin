@@ -50,24 +50,8 @@ after_success: |
   cargo test --no-run &&
   cd ../
   pwd &&
-  kcov --exclude-pattern=/.cargo,/usr/lib --verify target/cov target/debug/grin_core* && 
-  echo "Finished coverage for grin_core"
-  kcov --exclude-pattern=/.cargo,/usr/lib --verify target/cov target/debug/grin_chain* && 
-  echo "Finished coverage for grin_chain"
-  kcov --exclude-pattern=/.cargo,/usr/lib --verify target/cov target/debug/grin_keychain* &&
-  echo "Finished coverage for grin_keychain"
-  kcov --exclude-pattern=/.cargo,/usr/lib --verify target/cov target/debug/grin_p2p* &&
-  echo "Finished coverage for grin_p2p"
-  kcov --exclude-pattern=/.cargo,/usr/lib --verify target/cov target/debug/grin_pow* &&
-  echo "Finished coverage for grin_pow"
-  kcov --exclude-pattern=/.cargo,/usr/lib --verify target/cov target/debug/grin_store* &&
-  echo "Finished coverage for grin_store"
-  kcov --exclude-pattern=/.cargo,/usr/lib --verify target/cov target/debug/grin_wallet* &&
-  echo "Finished coverage for grin_wallet"
-  kcov --exclude-pattern=/.cargo,/usr/lib --verify target/cov target/debug/grin_util* &&
-  echo "Finished coverage for grin_util"
-  kcov --exclude-pattern=/.cargo,/usr/lib --verify target/cov target/debug/mine_simple* &&
-  echo "Finished coverage for mine_simple"
+  kcov --exclude-pattern=/.cargo,/usr/lib --verify target/cov target/debug/grin* && 
+  echo "Finished coverage for grin"
   bash <(curl -s https://codecov.io/bash) &&
   echo "Uploaded code coverage"
 
