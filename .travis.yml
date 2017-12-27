@@ -50,12 +50,8 @@ after_success: |
   cargo test --no-run &&
   cd ../
   pwd &&
-  kcov --exclude-pattern=/.cargo,/usr/lib --verify target/cov target/debug/grin_core* && 
-  echo "Finished coverage for grin_core"
-  kcov --exclude-pattern=/.cargo,/usr/lib --verify target/cov target/debug/grin_chain* && 
-  echo "Finished coverage for grin_chain"
-  kcov --exclude-pattern=/.cargo,/usr/lib --verify target/cov target/debug/mine_simple_* &&
-  echo "Finished coverage for mine_simple"
+  kcov --exclude-pattern=/.cargo,/usr/lib --verify target/cov target/debug/grin* && 
+  echo "Finished coverage for grin"
   bash <(curl -s https://codecov.io/bash) &&
   echo "Uploaded code coverage"
 
